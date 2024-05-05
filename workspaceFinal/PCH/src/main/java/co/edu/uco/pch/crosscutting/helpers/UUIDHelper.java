@@ -1,31 +1,38 @@
 package co.edu.uco.pch.crosscutting.helpers;
-
+import java.util.Random;
 import java.util.UUID;
 
-public final class UUIDHelper {
+public class UUIDHelper {
+
+	public static final UUID UUIDDEFECTO = new UUID(0L, 0L);
 	
 	private UUIDHelper() {
 		super();
 	}
 	
+	public static UUID generarUUIDDefecto() {
+        return new UUID(0L, 0L);
+    }
+	
+	public static UUID convertirStringaUUID(String uuidString) {
+            return UUID.fromString(uuidString);        
+    }
+	
+	public static UUID generarUUIDAleatorio() {
+		Random random = new Random();
+        long mas = random.nextLong();
+        long menos = random.nextLong();
+        return new UUID(mas, menos);
+    }
+	
 	public static final boolean isNull(final UUID uuid) {
-		return uuid == null;
+		return (uuid == null) || (uuid == UUIDDEFECTO);
 	}
 	
-	public static final boolean isNullOrEmpty(final UUID uuid) {
-		return isNull(uuid);
+	public static final UUID obtenerValorDefecto(final UUID uuid, final UUID valorDefecto) {		
+		return isNull(uuid) ? valorDefecto: uuid;
 	}
-	
-	public static final UUID getDefaultValue(final UUID uuid, final UUID defaultValue) {
-		return isNullOrEmpty(uuid)? defaultValue : uuid;			
-	}
-	
-	public static final UUID getDefaultValue(final UUID uuid) {
-		return getDefaultValue(uuid, UUID.fromString("00000000-0000-0000-0000-000000000000"));		
-	}
-	
-	public static final UUID applyDefault(final UUID uuid) {
-		return getDefaultValue(uuid);
+	public static final UUID obtenerValorDefecto(final UUID uuid) {		
+		return obtenerValorDefecto(uuid, UUIDDEFECTO);
 	}
 }
-

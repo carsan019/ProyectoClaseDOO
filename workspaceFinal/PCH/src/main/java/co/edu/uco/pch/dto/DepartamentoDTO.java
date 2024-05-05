@@ -2,16 +2,12 @@ package co.edu.uco.pch.dto;
 
 import java.util.UUID;
 
-public final class DepartamentoDTO {
+public class DepartamentoDTO {
+	
 	private UUID id;
 	private String nombre;
 	private PaisDTO pais;
 	
-	
-	public DepartamentoDTO() {
-		super();
-		
-	}
 	
 	public DepartamentoDTO(final UUID id, final String nombre, final PaisDTO pais) {
 		setId(id);
@@ -19,10 +15,14 @@ public final class DepartamentoDTO {
 		setPais(pais);
 	}
 	
+	public DepartamentoDTO() {
+		super();
+	}
+	
 	public static final DepartamentoDTO build() {
 		return new DepartamentoDTO();
 	}
-	
+
 	public final UUID getId() {
 		return id;
 	}
@@ -44,7 +44,6 @@ public final class DepartamentoDTO {
 		this.pais = pais;
 		return this;
 	}
-
 	
-
+	
 }

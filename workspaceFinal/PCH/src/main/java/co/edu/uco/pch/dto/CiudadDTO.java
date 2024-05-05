@@ -2,23 +2,21 @@ package co.edu.uco.pch.dto;
 
 import java.util.UUID;
 
-public final class CiudadDTO {
+public class CiudadDTO {
 	private UUID id;
 	private String nombre;
 	private DepartamentoDTO departamento;
 	
-	
-	public CiudadDTO() {
-		super();
-		
-	}
-	
-	public CiudadDTO(final UUID id, final String nombre, final DepartamentoDTO departamento) {
+	public CiudadDTO(final UUID id,final String nombre,final DepartamentoDTO departamento) {
 		setId(id);
 		setNombre(nombre);
 		setDepartamento(departamento);
-		
 	}
+	
+	public CiudadDTO() {
+		super();
+	}
+	
 	public static final CiudadDTO build() {
 		return new CiudadDTO();
 	}
@@ -44,6 +42,6 @@ public final class CiudadDTO {
 		this.departamento = departamento;
 		return this;
 	}
-
-
+	
+	
 }
