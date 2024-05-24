@@ -5,18 +5,16 @@ import co.edu.uco.pch.crosscutting.Exceptions.enums.Lugar;
 
 public final class ControllerPCHException extends PCHException{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
+	private static final Lugar lugar = Lugar.CONTROLLER;
 
 	public ControllerPCHException(final String mensajeUsuiario) {
-		super(mensajeUsuiario, Lugar.CONTROLLER);
+		super(mensajeUsuiario, lugar);
 	}
 
 	public ControllerPCHException(final String mensajeTecnico,final String mensajeUsuario, 
 			final Throwable exceptionRaiz) {
-		super(mensajeTecnico,mensajeUsuario, Lugar.CONTROLLER, exceptionRaiz);
+		super(mensajeTecnico,mensajeUsuario, lugar, exceptionRaiz);
 	}
 
 	

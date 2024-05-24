@@ -5,9 +5,6 @@ import co.edu.uco.pch.crosscutting.Exceptions.enums.Lugar;
 
 public final class DtoPCHException extends PCHException{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	public DtoPCHException(final String mensajeUsuiario) {

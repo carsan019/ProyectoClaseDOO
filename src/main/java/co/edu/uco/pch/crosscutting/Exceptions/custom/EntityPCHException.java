@@ -4,10 +4,7 @@ import co.edu.uco.pch.crosscutting.Exceptions.PCHException;
 import co.edu.uco.pch.crosscutting.Exceptions.enums.Lugar;
 
 public final class EntityPCHException extends PCHException{
-	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 
 	public EntityPCHException(final String mensajeUsuiario) {

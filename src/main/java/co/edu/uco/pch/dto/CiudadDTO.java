@@ -29,7 +29,7 @@ public class CiudadDTO {
 		return id;
 	}
 	public final CiudadDTO setId(final UUID id) {
-		this.id = UUIDHelper.obtenerValorDefecto(id);
+		this.id = id;
 		return this;
 	}
 	public final String getNombre() {

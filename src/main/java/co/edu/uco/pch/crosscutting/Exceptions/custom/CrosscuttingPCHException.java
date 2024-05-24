@@ -5,10 +5,6 @@ import co.edu.uco.pch.crosscutting.Exceptions.enums.Lugar;
 
 public class CrosscuttingPCHException extends PCHException{
 	
-	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final Lugar lugar = Lugar.CROSSCUTTING;
 

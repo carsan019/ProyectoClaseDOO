@@ -31,7 +31,7 @@ public class DepartamentoDTO {
 		return id;
 	}
 	public final DepartamentoDTO setId(final UUID id) {
-		this.id = UUIDHelper.obtenerValorDefecto(id);
+		this.id =id;
 		return this;
 	}
 	public final String getNombre() {

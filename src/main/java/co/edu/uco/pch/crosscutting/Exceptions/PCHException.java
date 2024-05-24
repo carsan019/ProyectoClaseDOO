@@ -1,5 +1,4 @@
 package co.edu.uco.pch.crosscutting.Exceptions;
-
 import co.edu.uco.pch.crosscutting.Exceptions.enums.Lugar;
 import co.edu.uco.pch.crosscutting.helpers.ObjectHelper;
 import co.edu.uco.pch.crosscutting.helpers.TextHelper;

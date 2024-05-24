@@ -28,7 +28,7 @@ public final class PaisDTO {
 		return id;
 	}
 	public final PaisDTO setId( final UUID id) {
-		this.id = UUIDHelper.obtenerValorDefecto(id);
+		this.id = id;
 		return this;
 	}
 	public final String getNombre() {
@@ -37,11 +37,6 @@ public final class PaisDTO {
 	public final PaisDTO setNombre(final String nombre) {
 		this.nombre=TextHelper.applyTrim(nombre);
 		return this;
-	}
-	
-	public static void main(String[] args) {
-		PaisDTO pais = PaisDTO.build();
-	}
-	
+	}	
 	
 }
