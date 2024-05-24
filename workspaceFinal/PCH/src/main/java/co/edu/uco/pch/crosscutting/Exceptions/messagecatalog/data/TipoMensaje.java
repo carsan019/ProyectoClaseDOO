@@ -1,6 +1,5 @@
-package co.edu.uco.pch.crosscutting.Exceptions.messagecatalog.data;
+package co.edu.uco.pch.crosscutting.exceptions.messageCatalog.data;
 
 public enum TipoMensaje {
 	USUARIO, TECNICO;
-
 }

@@ -1,4 +1,4 @@
-package co.edu.uco.pch.crosscutting.Exceptions.messagecatalog.data;
+package co.edu.uco.pch.crosscutting.exceptions.messageCatalog.data;
 
 public class Mensaje {
 	private CodigoMensaje codigo;
@@ -25,7 +25,7 @@ public class Mensaje {
 		return codigo;
 	}
 
-	public final categoriaMensaje getCategoria() {
+	public final CategoriaMensaje getCategoria() {
 		return getCodigo().getCategoria();
 	}
 
@@ -33,7 +33,7 @@ public class Mensaje {
 		return getCodigo().getTipo();
 	}
 
-	public final String getContenido() {
+	public final String getContendio() {
 		return contenido;
 	}
 	
@@ -41,4 +41,3 @@ public class Mensaje {
 		return getCodigo().getIdentificador();
 	}
 }
-
