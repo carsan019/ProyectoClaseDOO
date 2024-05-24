@@ -2,10 +2,10 @@ package co.edu.uco.pch.businnes.usecase.impl.ciudad;
 
 import java.util.UUID;
 
-import co.edu.uco.pch.business.assembler.entity.impl.DepartamentoAssemblerEntity;
-import co.edu.uco.pch.business.domain.CiudadDomain;
-import co.edu.uco.pch.business.usecase.UseCaseWithoutReturn;
-import co.edu.uco.pch.crosscutting.exceptions.customs.BusinessPCHException;
+import co.edu.uco.pch.businnes.assembler.entity.impl.DepartamentoAssemblerEntity;
+import co.edu.uco.pch.businnes.domain.CiudadDomain;
+import co.edu.uco.pch.businnes.usecase.UseCaseWithoutReturn;
+import co.edu.uco.pch.crosscutting.Exceptions.custom.BusinnesPCHException;
 import co.edu.uco.pch.crosscutting.helpers.ObjectHelper;
 import co.edu.uco.pch.crosscutting.helpers.UUIDHelper;
 import co.edu.uco.pch.data.dao.factory.DAOFactory;
@@ -20,7 +20,7 @@ public final class RegistrarCiudad implements UseCaseWithoutReturn<CiudadDomain>
         if(ObjectHelper.getObjectHelper().isNull(factory)){
             var mensajeUsuario = "Se ha presentado un porblema tratando de llevar a cabo el registro de una ciudad";
             var mensajeTecnico = "El DAOFactory para crear la ciudad llego nulo...";
-            throw new BusinessPCHException(mensajeTecnico, mensajeUsuario);
+            throw new BusinnesPCHException(mensajeTecnico,mensajeUsuario);
         }
         this.factory = factory;
     }
@@ -61,7 +61,7 @@ public final class RegistrarCiudad implements UseCaseWithoutReturn<CiudadDomain>
 
         if (!resultados.isEmpty()){
             var mensajeUsuario= "Ya existe una ciudad con el nombre \"${1}\" asociado con " ;
-            throw new BusinessPCHException(mensajeUsuario);
+            throw new BusinnesPCHException(mensajeUsuario);
 
         }
     }
