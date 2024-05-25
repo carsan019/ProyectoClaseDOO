@@ -19,6 +19,9 @@ public class CiudadDTO {
 	
 	public CiudadDTO() {
 		super();
+		setId(UUIDHelper.getDefault());
+		setNombre(TextHelper.EMPTY);
+		setDepartamento(ObjectHelper.getObjectHelper().getDefaultValue(departamento, new DepartamentoDTO()));
 	}
 	
 	public static final CiudadDTO build() {

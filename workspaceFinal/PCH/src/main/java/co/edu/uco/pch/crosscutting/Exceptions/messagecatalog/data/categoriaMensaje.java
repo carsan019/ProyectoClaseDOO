@@ -1,5 +1,7 @@
-package co.edu.uco.pch.crosscutting.exceptions.messageCatalog.data;
+package co.edu.uco.pch.crosscutting.Exceptions.messagecatalog.data;
 
-public enum CategoriaMensaje {
-	ERRROR, ADVERTENCIA, EXITO, INFORMACION;
+
+public enum categoriaMensaje {
+	ERROR, ADVERTENCIA, EXITO, INFORMACION;
+
 }
